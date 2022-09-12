@@ -1,6 +1,6 @@
 # vim-plugins
 
-My daily personal vim ide plugins for discord presence, nerdtree, laravel, react, coc nvim, theme, etc
+My daily personal vim ide plugins for discord presence, nerdtree, laravel, react, coc nvim, theme, etc.
 
 - OS : Linux 
 - Distro : Ubuntu 
