@@ -95,16 +95,23 @@ set t_Co=256
 set background=dark
 let g:solarized_termcolors=256
 let g:solarized_termtrans=1
+let g:loaded_perl_provider = 0
+"vim airline
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#left_sep = ' '
+let g:airline#extensions#tabline#left_alt_sep = '|'
+let g:airline#extensions#tabline#formatter = 'default'
 " put https://raw.github.com/altercation/vim-colors-solarized/master/colors/solarized.vim
 " in ~/.vim/colors/ and uncomment:
-" colorscheme solarized
+if has("!nvim")
+colorscheme solarized
+endif
 
 call plug#begin()
 
 "Plug 'vimsence/vimsence'
-Plug 'andweeb/presence.nvim'
-
-"Plug 'neoclide/coc.nvim', {'branch': 'master', 'do': 'yarn install --frozen-lockfile'}
+"Plug 'andweeb/presence.nvim'
+Plug 'neoclide/coc.nvim', {'branch': 'master', 'do': 'yarn install --frozen-lockfile'}
 "Plug 'vbe0201/vimdiscord'
 Plug 'preservim/nerdtree'
 Plug 'samoshkin/vim-find-files'
@@ -121,6 +128,9 @@ Plug 'peitalin/vim-jsx-typescript'
 Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 Plug 'jparise/vim-graphql'
 
+Plug 'vim-airline/vim-airline'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.0' }
 "Plug 'scrooloose/nerdtree'
 "Plug 'Xuyuanp/nerdtree-git-plugin'
 "Plug 'airblade/vim-gitgutter'
